@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import Header from "./components/Header";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
@@ -11,12 +13,14 @@ const Header = () => {
           alt="zomato logo"
           className="image"
           width={100}
-          // height={20}
         />
       </div>
       <div className="search-container">
         <div className="search-bar">
+          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon icon={faLocationDot} />
           <input
+            icon={<FontAwesomeIcon icon={faLocationDot} />}
             className="search-box"
             type="text"
             placeholder="Search"
